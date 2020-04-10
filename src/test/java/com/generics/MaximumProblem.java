@@ -2,16 +2,28 @@ package com.generics;
 
 public class MaximumProblem {
     public Integer findMaximumNumber(Integer firstNumber, Integer secondNumber, Integer thirdNumber){
-        Integer maximum=firstNumber;
+        Integer maximumValue=firstNumber;
 
-        if(maximum.compareTo(secondNumber) < 0) {
-            maximum=secondNumber;
+        if(maximumValue.compareTo(secondNumber) < 0) {
+            maximumValue=secondNumber;
         }
 
-        if(maximum.compareTo(thirdNumber) < 0) {
-            maximum=thirdNumber;
+        if(maximumValue.compareTo(thirdNumber) < 0) {
+            maximumValue=thirdNumber;
         }
 
-        return maximum;
+        return maximumValue;
+    }
+
+    public Float findMaximumNumber(Float firstNumber, Float secondNumber, Float thirdNumber) {
+        Float maximumValue = firstNumber;
+
+        if (maximumValue.compareTo(secondNumber) < 0) {
+            maximumValue = secondNumber;
+        }
+        if (maximumValue.compareTo(thirdNumber) < 0) {
+            maximumValue = thirdNumber;
+        }
+        return maximumValue;
     }
 }
