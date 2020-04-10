@@ -6,6 +6,7 @@ import org.junit.Test;
 
 public class MaximumProblemTest {
 
+    /* Testing Integer Value*/
     @Test
     public void givenIntegerMaxNumber_WhenAtFirstPosition_ShouldReturnSameNumber() {
         MaximumProblem maximumProblem=new MaximumProblem(50,20,30);
@@ -27,6 +28,7 @@ public class MaximumProblemTest {
         Assert.assertEquals((Integer.valueOf(50)), maximumValue);
     }
 
+    /* Testing Float Value*/
     @Test
     public void givenFloatMaxNumber_WhenAtFirstPosition_ShouldReturnSameNumber() {
         MaximumProblem maximumProblem = new MaximumProblem(50.2f,30.2f,20.2f);
@@ -48,6 +50,7 @@ public class MaximumProblemTest {
         Assert.assertEquals((Float.valueOf(50.2f)), maximumValue);
     }
 
+    /* Testing String Value */
     @Test
     public void givenStringValue_WhenAtFirstPosition_ShouldReturnMaxStringValue() {
         MaximumProblem maximumProblem = new MaximumProblem("Orange","Apple","Banana");

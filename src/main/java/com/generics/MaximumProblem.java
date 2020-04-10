@@ -11,6 +11,7 @@ public class MaximumProblem <E extends Comparable<E>>{
         this.thirdValue=thirdValue;
     }
 
+    /* Finding Maximum Value */
     public E findMaximum() {
         E maximumValue = firstValue;
 
@@ -20,6 +21,12 @@ public class MaximumProblem <E extends Comparable<E>>{
         if (maximumValue.compareTo(thirdValue) < 0) {
             maximumValue = thirdValue;
         }
+        printMax(maximumValue);
         return maximumValue;
+    }
+
+    /* Printing Maximum Value */
+    private static <E extends Comparable<E>> void printMax(E maximumValue) {
+        System.out.println("Maximum Value : " +maximumValue);
     }
 }
