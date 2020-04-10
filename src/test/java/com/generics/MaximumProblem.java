@@ -26,4 +26,14 @@ public class MaximumProblem {
         }
         return maximumValue;
     }
+    public String findMaximumString(String firstString, String secondString, String thirdString) {
+        String maximumValue = firstString;
+        if (maximumValue.compareTo(secondString) < 0) {
+            maximumValue = secondString;
+        }
+        if (maximumValue.compareTo(thirdString) < 0) {
+            maximumValue = thirdString;
+        }
+        return maximumValue;
+    }
 }

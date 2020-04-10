@@ -44,4 +44,19 @@ public class MaximumProblemTest {
         Float result=maximumProblem.findMaximumNumber(20.2f,30.2f,50.2f);
         Assert.assertEquals(Float.valueOf(50.2f),result);
     }
+
+    @Test
+    public void givenStringValue_WhenAtFirstPosition_ShouldReturnMaxStringValue() {
+        Assert.assertEquals("xyz", maximumProblem.findMaximumString("xyz", "def", "abc"));
+    }
+
+    @Test
+    public void givenStringValue_WhenAtSecondPosition_ShouldReturnMaxStringValue() {
+        Assert.assertEquals("xyz", maximumProblem.findMaximumString("abc", "xyz", "def"));
+    }
+
+    @Test
+    public void givenStringValue_WhenAtThirdPosition_ShouldReturnMaxStringValue() {
+        Assert.assertEquals("xyz", maximumProblem.findMaximumString("abc", "def", "xyz"));
+    }
 }
