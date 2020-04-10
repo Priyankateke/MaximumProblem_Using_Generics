@@ -14,49 +14,49 @@ public class MaximumProblemTest {
 
     @Test
     public void givenIntegerMaxNumber_WhenAtFirstPosition_ShouldReturnSameNumber() {
-        Assert.assertSame(50,maximumProblem.findMaximumNumber(50,20,30));
+        Assert.assertSame(50,maximumProblem.findMaximum(50,20,30));
     }
 
     @Test
     public void givenIntegerMaxNumber_WhenAtSecondPosition_ShouldReturnSameNumber() {
-        Assert.assertSame(50,maximumProblem.findMaximumNumber(20,50,30));
+        Assert.assertSame(50,maximumProblem.findMaximum(20,50,30));
     }
 
     @Test
     public void givenIntegerMaxNumber_WhenAtThirdPosition_ShouldReturnSameNumber() {
-        Assert.assertSame(50, maximumProblem.findMaximumNumber(20, 30, 50));
+        Assert.assertSame(50, maximumProblem.findMaximum(20, 30, 50));
     }
 
     @Test
     public void givenFloatMaxNumber_WhenAtFirstPosition_ShouldReturnSameNumber() {
-        Float result=maximumProblem.findMaximumNumber(50.2f,20.2f,30.2f);
+        Float result=maximumProblem.findMaximum(50.2f,20.2f,30.2f);
         Assert.assertEquals(Float.valueOf(50.2f),result);
     }
 
     @Test
     public void givenFloatMaxNumber_WhenAtSecondPosition_ShouldReturnSameNumber() {
-        Float result=maximumProblem.findMaximumNumber(20.2f,50.2f,30.2f);
+        Float result=maximumProblem.findMaximum(20.2f,50.2f,30.2f);
         Assert.assertEquals(Float.valueOf(50.2f),result);
     }
 
     @Test
     public void givenFloatMaxNumber_WhenAtThirdPosition_ShouldReturnSameNumber() {
-        Float result=maximumProblem.findMaximumNumber(20.2f,30.2f,50.2f);
+        Float result=maximumProblem.findMaximum(20.2f,30.2f,50.2f);
         Assert.assertEquals(Float.valueOf(50.2f),result);
     }
 
     @Test
     public void givenStringValue_WhenAtFirstPosition_ShouldReturnMaxStringValue() {
-        Assert.assertEquals("xyz", maximumProblem.findMaximumString("xyz", "def", "abc"));
+        Assert.assertEquals("xyz", maximumProblem.findMaximum("xyz", "def", "abc"));
     }
 
     @Test
     public void givenStringValue_WhenAtSecondPosition_ShouldReturnMaxStringValue() {
-        Assert.assertEquals("xyz", maximumProblem.findMaximumString("abc", "xyz", "def"));
+        Assert.assertEquals("xyz", maximumProblem.findMaximum("abc", "xyz", "def"));
     }
 
     @Test
     public void givenStringValue_WhenAtThirdPosition_ShouldReturnMaxStringValue() {
-        Assert.assertEquals("xyz", maximumProblem.findMaximumString("abc", "def", "xyz"));
+        Assert.assertEquals("xyz", maximumProblem.findMaximum("abc", "def", "xyz"));
     }
 }
