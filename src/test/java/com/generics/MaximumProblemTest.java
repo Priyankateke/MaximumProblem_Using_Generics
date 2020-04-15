@@ -1,7 +1,6 @@
 package com.generics;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class MaximumProblemTest {
@@ -9,66 +8,64 @@ public class MaximumProblemTest {
     /* Testing Integer Value*/
     @Test
     public void givenIntegerMaxNumber_WhenAtFirstPosition_ShouldReturnSameNumber() {
-        MaximumProblem maximumProblem=new MaximumProblem(50,20,30);
-        Integer maximumValue=(Integer) maximumProblem.findMaximum();
-        Assert.assertEquals((Integer.valueOf(50)),maximumValue);
+        Assert.assertEquals(Integer.valueOf(50), new MaximumProblem<>(50,20,30).findMaximum());
     }
 
     @Test
     public void givenIntegerMaxNumber_WhenAtSecondPosition_ShouldReturnSameNumber() {
-        MaximumProblem maximumProblem = new MaximumProblem(30,50,20);
-        Integer maximumValue = (Integer) maximumProblem.findMaximum();
-        Assert.assertEquals((Integer.valueOf(50)), maximumValue);
+        Assert.assertEquals((Integer.valueOf(50)), new MaximumProblem<>(20,50,30).findMaximum());
     }
 
     @Test
     public void givenIntegerMaxNumber_WhenAtThirdPosition_ShouldReturnSameNumber() {
-        MaximumProblem maximumProblem = new MaximumProblem(30,20,50);
-        Integer maximumValue = (Integer) maximumProblem.findMaximum();
-        Assert.assertEquals((Integer.valueOf(50)), maximumValue);
+        Assert.assertEquals((Integer.valueOf(50)), new MaximumProblem<>(30,20,50).findMaximum());
     }
 
     /* Testing Float Value*/
     @Test
     public void givenFloatMaxNumber_WhenAtFirstPosition_ShouldReturnSameNumber() {
-        MaximumProblem maximumProblem = new MaximumProblem(50.2f,30.2f,20.2f);
-        Float maximumValue = (Float) maximumProblem.findMaximum();
-        Assert.assertEquals((Float.valueOf(50.2f)), maximumValue);
+        Assert.assertEquals((Float.valueOf(50.2f)), new MaximumProblem<>(50.2f,20.2f,30.2f).findMaximum());
     }
 
     @Test
     public void givenFloatMaxNumber_WhenAtSecondPosition_ShouldReturnSameNumber() {
-        MaximumProblem maximumProblem = new MaximumProblem(30.2f,50.2f,20.2f);
-        Float maximumValue = (Float) maximumProblem.findMaximum();
-        Assert.assertEquals((Float.valueOf(50.2f)), maximumValue);
+        Assert.assertEquals((Float.valueOf(50.2f)), new MaximumProblem<>(20.2f,50.2f,30.2f).findMaximum());
     }
 
     @Test
     public void givenFloatMaxNumber_WhenAtThirdPosition_ShouldReturnSameNumber() {
-        MaximumProblem maximumProblem = new MaximumProblem(20.2f,30.2f,50.2f);
-        Float maximumValue = (Float) maximumProblem.findMaximum();
-        Assert.assertEquals((Float.valueOf(50.2f)), maximumValue);
+        Assert.assertEquals((Float.valueOf(50.2f)), new MaximumProblem<>(20.2f,30.2f,50.2f).findMaximum());
     }
 
     /* Testing String Value */
     @Test
     public void givenStringValue_WhenAtFirstPosition_ShouldReturnMaxStringValue() {
-        MaximumProblem maximumProblem = new MaximumProblem("Orange","Apple","Banana");
-        String maximumValue = (String) maximumProblem.findMaximum();
-        Assert.assertEquals("Orange", maximumValue);
+        Assert.assertEquals("Orange", new MaximumProblem<>("Orange","Apple","Banana").findMaximum());
     }
 
     @Test
     public void givenStringValue_WhenAtSecondPosition_ShouldReturnMaxStringValue() {
-        MaximumProblem maximumProblem = new MaximumProblem("Apple","Orange","Banana");
-        String maximumValue = (String) maximumProblem.findMaximum();
-        Assert.assertEquals("Orange", maximumValue);
+        Assert.assertEquals("Orange", new MaximumProblem<>("Apple","Orange","Banana").findMaximum());
     }
 
     @Test
     public void givenStringValue_WhenAtThirdPosition_ShouldReturnMaxStringValue() {
-        MaximumProblem maximumProblem = new MaximumProblem("Orange","Apple","Banana");
-        String maximumValue = (String) maximumProblem.findMaximum();
-        Assert.assertEquals("Orange", maximumValue);
+        Assert.assertEquals("Orange", new MaximumProblem<>("Orange","Apple","Banana").findMaximum());
+    }
+
+    /* Testing Optional Value */
+    @Test
+    public void givenIntegerMaxNumber_WhenAtFirstPosWithMultipleValues_ShouldReturnSameNumber() {
+        Assert.assertSame(20, MaximumProblem.findMaximum(20, 10, 8, 6, 5));
+    }
+
+    @Test
+    public void givenFloatMaxNumber_WhenAtFirstPosWithMultipleValues_ShouldReturnSameNumber() {
+        Assert.assertEquals(Float.valueOf(10.2f), MaximumProblem.findMaximum(10.2f, 8.2f, 7.2f, 6.2f, 5.2f, 4.2f));
+    }
+
+    @Test
+    public void givenStringMaxNumber_WhenAtFirstPosWithMultipleValues_ShouldReturnSameNumber() {
+        Assert.assertEquals("Watermelon", MaximumProblem.findMaximum("Watermelon", "Apple", "Mango", "Orange", "Banana", "Pineapple"));
     }
 }
